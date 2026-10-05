@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Weather App</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <h1>WEATHER APP</h1>
+    <hr />
+    <div id="error_display" class="hidden error-message"></div>
+    <section id="city_searchbar_section">
+        <form>
+            <label for="city_searchbar">Enter City Name:</label>
+            <input type="text" id="city_searchbar" name="city_searchbar" autocomplete="off" />
+            <button id="search_btn">Get Weather</button>
+        </form>
+        <div id="city_autocomplete"></div> 
+        <hr />
+    </section>
+    <section class="hidden" id="weather_section">
+        <h2>Current Weather</h2>
+        <div class="weather_city_and_temp">
+            <h3 id="city"></h3>
+            <img id="weather_icon" class="hidden" alt="Weather icon" src="" />
+            <h3 id="temperature"></h3>
+        </div>
+        <h3 id="apparent_temperature"></h3>
+        <h3 id="cloud_cover"></h3>
+        <h3 id="precipitation" class="hidden"></h3>
+        <h3 id="humidity"></h3>
+        <h3 id="wind_speed"></h3>
+        <h3 id="wind_direction"></h3>
+        <hr />
+    </section>
+    <section class="hidden" id="forecast_section">
+        <h2>7 Day Forecast</h2>
+        <div id="forecast_cards"></div>
+        <hr />
+    </section>
+    <script type="module" src='./js/main.js'></script>
+</body>
+</html>
